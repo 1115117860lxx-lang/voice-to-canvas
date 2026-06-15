@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import CommandInput from "@/components/voice/CommandInput";
 import VoiceController from "@/components/voice/VoiceController";
 import { useAppStore } from "@/store/useAppStore";
 
@@ -76,7 +77,13 @@ export default function HomePage() {
         </section>
       </div>
 
-      <VoiceController />
+      <div className="pointer-events-none absolute inset-x-0 bottom-8 flex justify-center px-4">
+        <div className="pointer-events-auto flex items-center gap-3 rounded-full border border-neutral-700 bg-neutral-950/90 p-2 pl-4 shadow-[0_0_40px_rgba(16,185,129,0.12)] backdrop-blur">
+          <CommandInput />
+          <div className="h-8 w-px bg-neutral-700" aria-hidden="true" />
+          <VoiceController />
+        </div>
+      </div>
     </main>
   );
 }
