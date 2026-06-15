@@ -1,0 +1,16 @@
+# 核心忽略
+node_modules/
+.next/
+dist/
+build/
+
+# Python 后端忽略
+__pycache__/
+*.pyc
+venv/
+.env
+
+# 操作系统与编辑器生成文件
+.DS_Store
+.vscode/
+.cursor/
